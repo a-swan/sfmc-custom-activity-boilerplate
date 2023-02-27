@@ -1,0 +1,73 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/journeyEntry.png",
+    "iconSmall": "images/journeyEntrySmall.png",
+    "category": "customer"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Journey Logging Custom Activity",
+      "description": "Logging",
+      "step1Label": "Configure Activity"
+    }
+  },
+
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://jb-logger.martech-dev.telia.io/journeybuilder/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://jb-logger.martech-dev.telia.io/journeybuilder/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://jb-logger.martech-dev.telia.io/journeybuilder/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "stop": {
+      "url": "https://jb-logger.martech-dev.telia.io/journeybuilder/stop",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://jb-logger.martech-dev.telia.io/journeybuilder/validate",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configure Activity",
+      "key": "step1"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 1000,
+      "width": 1100,
+      "fullscreen": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    }
+  }
+}
